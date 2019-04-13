@@ -27,7 +27,7 @@ var testcases = []struct {
 	},
 }
 
-func TestMaximumSpanningTree(t *testing.T) {
+func TestMinimumSpanningTree(t *testing.T) {
 	t.Parallel()
 	for _, tc := range testcases {
 		if result := MinimumSpanningTree(tc.graph); !reflect.DeepEqual(result, tc.mst) {
@@ -36,7 +36,7 @@ func TestMaximumSpanningTree(t *testing.T) {
 	}
 }
 
-func BenchmarkMaximumSpanningTree(b *testing.B) {
+func BenchmarkMinimumSpanningTree(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		for _, tc := range testcases {
 			MinimumSpanningTree(tc.graph)
