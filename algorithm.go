@@ -22,14 +22,17 @@ type SimpleWeightedEdge struct {
 	F, T, W int
 }
 
+// From returns the integer identifier of the first vertex.
 func (s SimpleWeightedEdge) From() int {
 	return s.F
 }
 
+// To returns the integer identifier of the second vertex.
 func (s SimpleWeightedEdge) To() int {
 	return s.T
 }
 
+// Weight returns the integer identifier of the weight/cost.
 func (s SimpleWeightedEdge) Weight() int {
 	return s.W
 }
